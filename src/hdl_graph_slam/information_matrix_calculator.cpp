@@ -46,6 +46,8 @@ Eigen::MatrixXd InformationMatrixCalculator::calc_information_matrix(const pcl::
   return inf;
 }
 
+ 
+// similarity score after correction  
 double InformationMatrixCalculator::calc_fitness_score(const pcl::PointCloud<PointT>::ConstPtr& cloud1, const pcl::PointCloud<PointT>::ConstPtr& cloud2, const Eigen::Isometry3d& relpose, double max_range) const {
   pcl::search::KdTree<PointT>::Ptr tree_(new pcl::search::KdTree<PointT>());
   tree_->setInputCloud(cloud1);
